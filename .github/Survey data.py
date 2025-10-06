@@ -20,3 +20,5 @@ data = {
 
 surveyData = pd.DataFrame(data)
 print(surveyData)
+
+print(surveyData.describe())
