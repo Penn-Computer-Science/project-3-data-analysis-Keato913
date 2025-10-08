@@ -22,5 +22,10 @@ print("Stats")
 print(round(surveyData.describe()))
 
 print("-_"*20)
-print("First student data")
+print("First person's data")
 print(surveyData.iloc[0])
+
+print("-_"*20)
+print("Average GPA per morning person")
+print(surveyData.groupby('mPerson')['GPA'].mean())
+
