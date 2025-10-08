@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 bebed = ["Doomscroll", "Watch TV", "Read", "Nothing"]
 showers = ["Morning", "Night", "Never"]
 mPerson = ["Yes", "No"]
-sleep  = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]
+sleep  = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 GPA = ["Zero-One", "One-Two", "Two-Three", "Three-Four", "Four-Five" ,"Five-Six", "Six-Seven", "Seven-Eight", "Eight-Nine", "Nine-Ten"]
 Amount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
@@ -20,5 +20,6 @@ data = {
 
 surveyData = pd.DataFrame(data)
 print(surveyData)
+surveyData.to_csv('data.csv',index=False)
 
-print(surveyData.describe())
+

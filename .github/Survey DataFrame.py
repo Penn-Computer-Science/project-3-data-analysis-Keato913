@@ -29,3 +29,10 @@ print("-_"*20)
 print("Average GPA per morning person")
 print(surveyData.groupby('mPerson')['GPA'].mean())
 
+surveyData.groupby('bebed')['sleep'].mean()
+
+surveyData.groupby('bebed')['sleep'].mean().plot(kind="bar")
+plt.title("Average sleep by what you do before bed")
+plt.xlabel("sleep(Hours)")
+plt.ylabel("before bed")
+plt.show()
