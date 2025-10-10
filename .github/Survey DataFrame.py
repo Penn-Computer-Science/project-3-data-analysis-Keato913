@@ -31,7 +31,19 @@ print(surveyData.groupby('Morning person?')['GPA'].mean())
 
 surveyData.groupby('Before bed')['Hours of sleep'].mean()
 
-surveyData.groupby('Before bed')['Hours of sleep'].mean().plot(kind="barh")
+surveyData.groupby('Before bed')['Hours of sleep'].mean().plot(kind="bar")
+plt.title("Average sleep by what you do before bed")
+plt.xlabel("sleep(Hours)")
+plt.ylabel("before bed")
+plt.show()
+
+surveyData.groupby('Before bed')['Hours of sleep'].mean().plot(kind="line")
+plt.title("Average sleep by what you do before bed")
+plt.xlabel("sleep(Hours)")
+plt.ylabel("before bed")
+plt.show()
+
+surveyData.groupby('Before bed')['Hours of sleep'].mean().plot(kind="box")
 plt.title("Average sleep by what you do before bed")
 plt.xlabel("sleep(Hours)")
 plt.ylabel("before bed")
