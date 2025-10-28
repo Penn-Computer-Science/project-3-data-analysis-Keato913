@@ -19,7 +19,6 @@ data = {
 }
 
 surveyData = pd.DataFrame(data)
-print(surveyData)
 surveyData.to_csv('data.csv',index=False)
 
 
