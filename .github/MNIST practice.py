@@ -60,16 +60,19 @@ history = model.fit(x_train, y_train, batch_size = batch_size, epochs = epochs, 
 #plot out training and validation accuracy and loss
 fig, ax = plt.subplots(2,1)
 
-ax[0].plot(history.history('loss'), color = 'b', label = "Training Loss")
-ax[0].plot(history.history('val_loss'), color = 'r', label = "Training Loss")
-Legend = ax[0].Legend(loc='best', shadow=True)
-ax[0].settitle('Loss')
+ax[0].plot(history.history['loss'], color = 'b', label = "Training Loss")
+ax[0].plot(history.history['val_loss'], color = 'r', label = "Training Loss")
+Legend = ax[0].legend(loc='best', shadow=True)
+ax[0].set_title('Loss')
 ax[0].set_xlabel('Epochs')
 ax[0].set_ylabel('Loss')
 
-ax[1].plot(history.history('Acc'), color = 'b', label = "Training Accuracy")
-ax[1].plot(history.history('val_Acc'), color = 'r', label = "Training Accuracy")
-Legend = ax[1].Legend(loc='best', shadow=True)
-ax[1].settitle('Accuracy')
+ax[1].plot(history.history['acc'], color = 'b', label = "Training Accuracy")
+ax[1].plot(history.history['val_acc'], color = 'r', label = "Training Accuracy")
+Legend = ax[1].legend(loc='best', shadow=True)
+ax[1].set_title('Accuracy')
 ax[1].set_xlabel('Epochs')
 ax[1].set_ylabel('Accuracy')
+
+plt.tight_layout()
+plt.show()
